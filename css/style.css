@@ -1,0 +1,786 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+* a:hover {
+    color: orangered;
+}
+
+
+/* mobile navigation */
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.nav-background {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.nav-trigger {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 2;
+    display: none;
+    cursor: pointer;
+}
+
+.site-content-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: white;
+    z-index: 4;
+    transition: all 0.3s ease;
+}
+
+.site-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+.site-content-wrapper.scaled {
+    transform: scale(0.9) translateX(90%);
+    border-radius: 3px;
+    box-shadow: 0 3px 10px 0 gray;
+}
+
+
+/* mobile nav style */
+
+.main-wrapper .nav-background .logo {
+    padding: 1rem;
+}
+
+.main-wrapper .nav-background .logo img {
+    width: 80px;
+    height: 80px;
+}
+
+.main-wrapper .nav-background .mobile-nav {
+    margin-left: 1rem;
+}
+
+.main-wrapper .nav-background .mobile-nav ul li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.main-wrapper .nav-background .mobile-nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* header */
+
+header {
+    background-image: url(../images/hikking.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    width: 100%;
+    height: 650px;
+}
+
+header::before {
+    content: '';
+    background-image: url(../images/shape1.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+header::after {
+    content: '';
+    background-image: url(../images/shape2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+
+nav .navbar {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navbar ul li {
+    list-style-type: none;
+    margin: 2rem;
+}
+
+nav .navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+nav .navbar .logo {
+    margin-left: 7rem;
+}
+
+nav .navbar .logo img {
+    width: 60px;
+    margin-top: 1rem;
+}
+
+.container {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+header .content {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+}
+
+header .content h1 {
+    font-size: 4rem;
+    font-family: "OpenSans";
+    color: rgb(222, 179, 126);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: left;
+    text-shadow: 0px 5px 5px rgba(84, 82, 79, 0.22);
+}
+
+header .content h5 {
+    font-size: 23px;
+    font-family: "Myriad Pro";
+    color: rgb(84, 82, 79);
+    line-height: 1.2;
+    text-align: justifyCenter;
+    margin-bottom: 2rem;
+}
+
+header .content button {
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: rgb(119, 108, 100);
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border: none;
+    font-weight: bolder;
+    border-radius: 30px;
+    background-color: white;
+    margin-bottom: 1rem;
+}
+
+header .content p {
+    font-size: 19px;
+    font-family: "Myriad Pro";
+    color: rgb(84, 82, 79);
+    line-height: 1.2;
+    padding-right: 2rem;
+    text-align: left;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+section.lets h1 {
+    font-size: 4rem;
+    font-family: "OpenSans";
+    color: rgb(226, 163, 85);
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+section.lets h6 {
+    font-size: 2rem;
+    font-family: "Myriad Pro";
+    color: rgb(127, 119, 112);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+section.lets .card-wrapper {
+    display: flex;
+    margin-right: -2rem;
+}
+
+section.lets .card-wrapper .card {
+    background-color: gray;
+    margin-right: 2rem;
+}
+
+section.lets .card-wrapper .card img {
+    width: 100%;
+}
+
+section.lets .card-wrapper .card .card-text {
+    padding: 4rem 0.5rem;
+}
+
+section.lets .btn-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section.lets button {
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: white;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    border: none;
+    font-weight: bolder;
+    border-radius: 30px;
+    background-color: rgb(119, 108, 100);
+    margin-bottom: 1rem;
+}
+
+.shape {
+    position: absolute;
+    background-image: url(../images/shape2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 140px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+header .top-header {
+    position: relative;
+}
+
+.shape2 {
+    position: absolute;
+    background-image: url(../images/shape1.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100px;
+    z-index: 0;
+    left: 0;
+    top: 0;
+}
+
+.discount-wrapper {
+    background-color: rgb(127, 119, 112);
+}
+
+.discount-wrapper .card {
+    display: flex;
+}
+
+.discount-wrapper .card .discount-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.discount-wrapper .card .image {
+    flex: 1;
+}
+
+.discount-wrapper .card img {
+    width: 100%;
+    height: 100%;
+}
+
+.discount-wrapper .card .discount-text {
+    color: white;
+}
+
+.discount-wrapper .card .discount-text h1 {
+    font-size: 4rem;
+    text-align: justify-center;
+    line-height: 1.2;
+}
+
+.discount-wrapper .card .discount-text p {
+    line-height: 1.2;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-align: justify-center;
+    padding: 0 4rem;
+}
+
+.discount-wrapper .card .discount-text button {
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: white;
+    text-align: center;
+    padding: 0.7rem 2rem;
+    border: none;
+    font-weight: bolder;
+    border-radius: 30px;
+    background-color: rgb(222, 179, 126);
+}
+
+.discount-wrapper .card .discount-text .btn-wrapper {
+    margin-top: 2rem;
+}
+
+section.hikking {
+    background-color: rgb(127, 119, 112);
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.hikking::before {
+    content: '';
+    background-image: url(../images/shape1.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+section.hikking::after {
+    content: '';
+    background-image: url(../images/shape2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+
+section.hikking .text {
+    padding: 0 8rem;
+}
+
+section.hikking .text h1 {
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+section.hikking .text p {
+    color: white;
+    font-size: 2rem;
+}
+
+.explore {
+    position: relative;
+}
+
+.explore img {
+    width: 100%;
+    height: 600px;
+}
+
+.explore::before {
+    content: '';
+    background-image: url(../images/shape1.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+.explore::after {
+    content: '';
+    background-image: url(../images/shape2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+
+.explore h1 {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-family: "OpenSans";
+    color: rgb(222, 179, 126);
+    font-style: italic;
+    line-height: 1.2;
+    text-align: right;
+    text-shadow: 0px 5px 5px rgba(84, 82, 79, 0.36);
+}
+
+.explore h1 span {
+    color: black;
+}
+
+section.main .card-wrapper {
+    display: flex;
+    margin-left: -2rem;
+}
+
+section.main .card-wrapper .card {
+    margin-left: 2rem;
+}
+
+section.main .card-wrapper .card h1 {
+    color: rgb(222, 179, 126);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section.main .text h1 {
+    margin-top: 6rem;
+    text-align: center;
+    font-size: 6rem;
+    font-style: italic;
+}
+
+section.main .text p {
+    padding: 0 6rem;
+    text-align: center;
+}
+
+section.main .text h6 {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+section.title {
+    background-color: rgb(222, 179, 126);
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+section.title::before {
+    content: '';
+    background-image: url(../images/shape1.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+}
+
+section.title::after {
+    content: '';
+    background-image: url(../images/shape2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+
+section.title .container {
+    text-align: center;
+    margin-top: 6rem;
+}
+
+section.title .container h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section.title .container p {
+    margin-bottom: 1rem;
+}
+
+section.title .container input {
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+section.title .container input:focus {
+    outline: none;
+}
+
+section.title .container button {
+    font-size: 16px;
+    font-family: "OpenSans";
+    color: white;
+    text-align: center;
+    padding: 0.7rem 2rem;
+    border: none;
+    font-weight: bolder;
+    border-radius: 30px;
+    background-color: gray;
+}
+
+footer {
+    background-color: gray;
+    position: relative;
+    padding: 10rem 0;
+}
+
+footer::after {
+    content: '';
+    background-image: url(../images/shape2.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-column-gap: 2rem;
+    align-content: center;
+}
+
+footer .container div:first-child h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+footer .container div:first-child p {
+    color: white;
+    padding-right: 4rem;
+    margin-bottom: 1rem;
+}
+
+footer .container div h1 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+footer .container div ul li {
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+}
+
+footer .container div ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* media query */
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 940px;
+    }
+}
+
+@media (max-width:768px) {
+    nav {
+        display: none;
+    }
+    .nav-trigger {
+        display: block;
+    }
+    header .content h1 {
+        font-size: 3rem;
+    }
+    header .content {
+        left: 30px;
+    }
+    header .content h5 {
+        font-size: 1rem;
+    }
+    header .content p {
+        font-size: 14px;
+    }
+    .discount-wrapper .card {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .discount-wrapper .card img {
+        height: 600px;
+    }
+    .discount-wrapper .card .discount-text .btn-wrapper {
+        margin-bottom: 2rem;
+    }
+    .explore h1 {
+        font-size: 3rem;
+        top: 250px;
+        right: 32px;
+    }
+}
+
+@media (max-width:576px) {
+    header .content h1 {
+        font-size: 26px;
+    }
+    header .content {
+        top: 110px;
+    }
+    header {
+        height: 450px;
+    }
+    header .content h5 {
+        font-size: 16px;
+    }
+    header .content p {
+        font-size: 14px;
+        padding-right: 14rem;
+    }
+    section.lets h1 {
+        font-size: 3rem;
+    }
+    section.lets h6 {
+        font-size: 1rem;
+    }
+    section.lets .card-wrapper {
+        flex-direction: column;
+    }
+    section.lets .card-wrapper .card {
+        margin-bottom: 2rem;
+    }
+    section.lets .card-wrapper .card img {
+        height: 250px;
+    }
+    section.lets .btn-wrapper {
+        margin-top: 1rem;
+    }
+    .discount-wrapper .card .discount-text h1 {
+        font-size: 2rem;
+        padding-top: 2rem;
+    }
+    .discount-wrapper .card .discount-text p {
+        font-size: 1rem;
+    }
+    .discount-wrapper .card img {
+        height: 300px;
+    }
+    section.hikking .text {
+        padding: 0;
+    }
+    section.hikking .text h1 {
+        font-size: 2rem;
+    }
+    section.hikking .text p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    section.hikking {
+        height: 450px;
+    }
+    .explore h1 {
+        font-size: 1.6rem;
+        top: 220px;
+        right: 24px;
+    }
+    .explore img {
+        height: 450px;
+    }
+    section.main .card-wrapper {
+        flex-direction: column;
+    }
+    section.main .card-wrapper .card {
+        padding: 2rem;
+    }
+    section.title {
+        height: 450px;
+    }
+    section.title .container {
+        margin-top: 4rem;
+    }
+    footer .container {
+        grid-template-columns: 1fr;
+    }
+    footer .container div:first-child .social {
+        margin-bottom: 2rem;
+    }
+    footer .container div {
+        margin-bottom: 2rem;
+    }
+}
