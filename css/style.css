@@ -102,7 +102,7 @@ header {
     background-size: 100% 100%;
     position: relative;
     width: 100%;
-    height: 650px;
+    height: 700px;
 }
 
 header::before {
@@ -332,7 +332,7 @@ header .top-header {
 
 .discount-wrapper .card img {
     width: 100%;
-    height: 100%;
+    height: 500px;
 }
 
 .discount-wrapper .card .discount-text {
@@ -432,7 +432,7 @@ section.hikking .text p {
 
 .explore img {
     width: 100%;
-    height: 600px;
+    height: 700px;
 }
 
 .explore::before {
@@ -782,5 +782,34 @@ footer .container div ul li a {
     }
     footer .container div {
         margin-bottom: 2rem;
+    }
+}
+
+@media(max-width:340px) {
+    header .content h1 {
+        font-size: 20px;
+    }
+    header .content h5 {
+        font-size: 12px;
+    }
+    header .content button {
+        font-size: 14px;
+    }
+    header .content p {
+        font-size: 10px;
+        text-align: justify;
+    }
+    section.lets h1 {
+        font-size: 1.5rem;
+    }
+    .explore h1 {
+        right: 16px;
+        font-size: 1.4rem;
+    }
+    section.title .container h1 {
+        font-size: 1.5rem;
+    }
+    section.title .container p {
+        font-size: 1rem;
     }
 }
